@@ -79,6 +79,6 @@ footer:
     - { label: "Contact", href: "#access" }
     - { label: "Instagram", href: "#" }
   legal:
-    - "Mentions légales"
-    - "Politique de confidentialité"
+    - { label: "Mentions légales", href: "#" }
+    - { label: "Politique de confidentialité", href: "#" }
   note: "Site de démonstration — aucune vente, aucun paiement."

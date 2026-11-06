@@ -26,7 +26,7 @@ const construction = c.construction.items
   .join('')
 
 const footerLinks = c.footer.links.map((l) => `<a href="${esc(l.href)}">${esc(l.label)}</a>`).join('')
-const legal = c.footer.legal.map((l) => `<span>${esc(l)}</span>`).join('')
+const legal = c.footer.legal.map((l) => `<a href="${esc(l.href)}">${esc(l.label)}</a>`).join('')
 
 document.querySelector('#app').innerHTML = `
   <div class="announcement label">${esc(c.announcement)}</div>
@@ -36,10 +36,10 @@ document.querySelector('#app').innerHTML = `
   </header>
   <main id="top">
     <section class="hero">
-      <div class="hero-visual" aria-hidden="true"></div>
+      <div class="hero-visual" aria-hidden="true"><span class="placeholder-tag label">Placeholder visuel</span></div>
       <div class="hero-inner">
-        <p class="label">${esc(c.drop.eyebrow)} · ${esc(c.drop.launch_date)}</p>
-        <h1>${esc(c.drop.eyebrow)}<br /><span>${esc(c.drop.title)}</span></h1>
+        <p class="label">${esc(c.drop.name)} · ${esc(c.drop.launch_date)}</p>
+        <h1>${esc(c.drop.title)}</h1>
         <p class="hero-tag">${esc(c.brand.tagline)}</p>
         <div class="cta-row">
           <a class="btn btn-primary" href="${esc(c.drop.primary_cta.href)}">${esc(c.drop.primary_cta.label)}</a>
